@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Screen PDF Viewer</title>
     <link rel="stylesheet" href="styles1.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #pdf-container {
+            height: 100%;
+            width: 100%;
+        }
+        #pdf-frame {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div id="pdf-container">
-        <iframe id="pdf-frame" src="pdf/Panchanagam-2025-compressed-min.pdf" frameborder="0"></iframe>
+        <iframe id="pdf-frame" src="https://pkaushik-02002.github.io/Panchangam/pdf/Panchanagam-2025-compressed-min.pdf" frameborder="0"></iframe>
     </div>
 
     <script src="script1.js"></script>
