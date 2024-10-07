@@ -33,66 +33,10 @@ header {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-size: 1rem; /* Adjust font size for responsiveness */
-    text-align: center; /* Center align the text */
-    width: auto; /* Let the width adjust to content */
-    max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
-    box-sizing: border-box; /* Include padding and border in element's total width */
 }
 
 .pdf-button:hover {
     background-color: #0056b3;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .pdf-button {
-        padding: 10px 15px; /* Reduce padding on smaller screens */
-        font-size: 0.9rem; /* Slightly smaller font for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .pdf-button {
-        padding: 8px 10px; /* Further reduce padding on very small screens */
-        font-size: 0.8rem; /* Even smaller font for very small screens */
-        width: 100%; /* Make button full width */
-    }
-}
-
-
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-}
-
-.nav-menu li {
-    margin-left: 20px;
-}
-
-.nav-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger .line {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px;
 }
 
 main {
@@ -110,15 +54,16 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form label {
-    display: block;
-    margin: 10px 0 5px;
+.form-group {
+    margin-bottom: 15px; /* Add space between form groups */
 }
 
-form select, form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+.result {
+    margin-top: 20px; /* Space above the result area */
+    padding: 15px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background: #e9f5ff; /* Light blue background */
 }
 
 footer {
