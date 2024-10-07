@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panchangam Wedding Matchmaking</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <header>
         <div class="container">
             <h1>Panchangam Wedding Matchmaking</h1>
@@ -28,55 +28,63 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <section id="home">
+        <section id="home" class="hero">
             <div class="container">
                 <h2>Welcome to Panchangam Wedding Matchmaking</h2>
-                <p>Find the best dates and matches for your wedding according to traditional Panchangam.</p>
+                <p>Discover the best dates and matches for your wedding based on traditional Panchangam.</p>
             </div>
         </section>
 
-        <!-- Panchangam Section -->
-        <section id="panchangam">
+        <section id="panchangam" class="feature-section">
             <div class="container">
                 <h2>Panchangam Calendar 2025</h2>
-                <div id="calendar-content">
+                <div class="pdf-container">
                     <a href="pdf/Panchanagam-2025-compressed-min.pdf" class="pdf-button" target="_blank" download>Download Panchangam PDF</a>
-                    <iframe src="pdf/Panchanagam-2025-compressed-min.pdf" frameborder="0" style="width: 100%; height: 600px; margin-top: 20px;"></iframe>
+                    <iframe src="pdf/Panchanagam-2025-compressed-min.pdf" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Horoscope Matching Section -->
-        <section id="horoscope">
+        <section id="horoscope" class="feature-section">
             <div class="container">
                 <h2>Horoscope Matching</h2>
                 <form id="horoscope-form">
-                    <label for="bride-nakshatram">Bride's Nakshatram:</label>
-                    <select id="bride-nakshatram">
-                        <!-- Options here -->
-                    </select>
-                    <label for="bride-rashi">Bride's Rashi:</label>
-                    <select id="bride-rashi">
-                        <!-- Options here -->
-                    </select>
-                    <label for="groom-nakshatram">Groom's Nakshatram:</label>
-                    <select id="groom-nakshatram">
-                        <!-- Options here -->
-                    </select>
-                    <label for="groom-rashi">Groom's Rashi:</label>
-                    <select id="groom-rashi">
-                        <!-- Options here -->
-                    </select>
-                    <button type="button" onclick="calculateHoroscope()">Check Compatibility</button>
+                    <div class="form-group">
+                        <label for="bride-nakshatram">Bride's Nakshatram:</label>
+                        <select id="bride-nakshatram" required>
+                            <option value="">Select Nakshatram</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bride-rashi">Bride's Rashi:</label>
+                        <select id="bride-rashi" required>
+                            <option value="">Select Rashi</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="groom-nakshatram">Groom's Nakshatram:</label>
+                        <select id="groom-nakshatram" required>
+                            <option value="">Select Nakshatram</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="groom-rashi">Groom's Rashi:</label>
+                        <select id="groom-rashi" required>
+                            <option value="">Select Rashi</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    <button type="button" class="btn" onclick="calculateHoroscope()">Check Compatibility</button>
                 </form>
-                <div id="horoscope-result"></div>
+                <div id="horoscope-result" class="result"></div>
             </div>
         </section>
 
-        <!-- Animal Match Section -->
-        <section id="animal-match">
+        <section id="animal-match" class="feature-section">
             <div class="container">
                 <h2>Animal Match Compatibility</h2>
                 <form id="animal-match-form">
@@ -84,46 +92,23 @@
                         <label for="bride-animal">Bride's Animal Sign:</label>
                         <select id="bride-animal" required>
                             <option value="">Select Animal</option>
-                            <option value="Cow">Cow</option>
-                            <option value="Horse">Horse</option>
-                            <option value="Elephant">Elephant</option>
-                            <option value="Lion">Lion</option>
-                            <option value="Dog">Dog</option>
-                            <option value="Cat">Cat</option>
-                            <option value="Monkey">Monkey</option>
-                            <option value="Rat">Rat</option>
-                            <option value="Snake">Snake</option>
-                            <option value="Sheep">Sheep</option>
-                            <option value="Buffalo">Buffalo</option>
-                            <option value="Tiger">Tiger</option>
+                            <!-- Add options here -->
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="groom-animal">Groom's Animal Sign:</label>
                         <select id="groom-animal" required>
                             <option value="">Select Animal</option>
-                            <option value="Cow">Cow</option>
-                            <option value="Horse">Horse</option>
-                            <option value="Elephant">Elephant</option>
-                            <option value="Lion">Lion</option>
-                            <option value="Dog">Dog</option>
-                            <option value="Cat">Cat</option>
-                            <option value="Monkey">Monkey</option>
-                            <option value="Rat">Rat</option>
-                            <option value="Snake">Snake</option>
-                            <option value="Sheep">Sheep</option>
-                            <option value="Buffalo">Buffalo</option>
-                            <option value="Tiger">Tiger</option>
+                            <!-- Add options here -->
                         </select>
                     </div>
-                    <button type="button" onclick="checkAnimalMatch()">Check Animal Compatibility</button>
+                    <button type="button" class="btn" onclick="checkAnimalMatch()">Check Compatibility</button>
                 </form>
                 <div id="animal-match-result" class="result"></div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Panchangam Wedding Matchmaking. All rights reserved.</p>
