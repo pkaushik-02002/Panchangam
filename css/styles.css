@@ -107,7 +107,6 @@ header h1::after {
 }
 
 .nav-menu a::before {
-    content: '🕉';
     position: absolute;
     left: -10px;
     opacity: 0;
